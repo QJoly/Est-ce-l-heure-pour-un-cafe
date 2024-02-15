@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Est-ce l'heure pour un café ?</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Est-ce l'heure pour un café ?">
+    <script defer>
+        function isItTime() {
+            const d = new Date();
+            let hour = d.getHours();
+            console.log(hour);
+            if (hour > 5 && hour < 18) {
+                document.querySelector('#answer').innerText = 'Va faire un café ☕';
+            } else if (hour < 5) {
+                document.querySelector('#answer').innerText = 'Trop tôt pour un café';
+            } else if (hour > 18) {
+                document.querySelector('#answer').innerText = 'Jamais trop tard pour un café ☕';                
+            }
+        }
+
+
+    </script>
+</head>
+
+<body onload='isItTime()'>
+    <main>
+        <p id="answer">Non !</p>
+    </main>
+</body>
+
+</html>
