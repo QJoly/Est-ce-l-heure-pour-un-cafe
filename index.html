@@ -5,13 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Est-ce l'heure pour un café ?</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
     <link rel="stylesheet" href="style.css">
+
     <meta name="description" content="Est-ce l'heure pour un café ?">
+
     <script defer>
         function isItTime() {
             const d = new Date();
             let hour = d.getHours();
-            console.log(hour);
             if (hour > 5 && hour < 18) {
                 document.querySelector('#answer').innerText = 'Va faire un café ☕';
             } else if (hour < 5) {
@@ -21,13 +26,26 @@
             }
         }
 
+        function getQuote(){
+            fetch('quotes.txt')
+                .then(response => response.text())
+                .then(text => {
+                    const quotes = text.split('\n');
+                    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                    document.querySelector('#quote').innerText = randomQuote;
+                });
+        }
+
+        function 
 
     </script>
 </head>
 
-<body onload='isItTime()'>
+<body onload='isItTime(), getQuote()'>
     <main>
-        <p id="answer">Non !</p>
+        <h1 id="answer">Non !</h1>
+
+        <i id="quote"></i>
     </main>
 </body>
 
