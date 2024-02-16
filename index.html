@@ -30,6 +30,17 @@
             } else if (hour > 18) {
                 document.querySelector('#answer').innerText = 'Jamais trop tard pour un café ☕';                
             }
+            blinkTitle();
+        }
+
+        function blinkTitle() {
+            const title = document.querySelector('title');
+            title.innerText = '☕ Café ? ☕';
+            // Add and remove the title every 1 second
+            setInterval(() => {
+                title.innerText = title.innerText === '☕ Café ? ☕' ? 'Est-ce l\'heure pour un café ?' : '☕ Café ? ☕';
+            }, 2000);
+
         }
 
         function getQuote(){
