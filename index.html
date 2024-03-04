@@ -71,7 +71,6 @@
                 .then(text => {
                     const quotes = text.split('\n');
                     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-                    console.log(randomQuote);
                     document.querySelector('#quote').innerText = randomQuote;
                 });
         }
