@@ -6,4 +6,4 @@ Ne perdez pas votre temps à vous poser ces questions. Laissez le programme déc
 
 ### Addictions
 
-Le café est une drogue. Il est important de ne pas en abuser. Si vous avez des problèmes d'addiction, consultez un professionnel de la santé et ne prenez pas ce programme au sérieux.
+Le café est une drogue. Il est important de ne pas en abuser. Si vous avez des problèmes d'addiction, consultez un professionnel de la santé et ne prenez pas ce programme au sérieux (ps : moi je suis une exception, j'arrête quand je veux !)
